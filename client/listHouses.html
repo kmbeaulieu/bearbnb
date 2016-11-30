@@ -1,0 +1,15 @@
+<template name="listHouses">
+  <div class="container">
+    {{#if Template.subscriptionsReady}}
+    <div class="row">
+      {{#each houses}}
+        {{> cardHouse}}
+      {{else}}
+        <p>There are no houses shared.</p>
+      {{/each}}
+    </div>
+    {{else}}
+      <p>Loding...</p>
+    {{/if}}
+  </div>
+</template>
