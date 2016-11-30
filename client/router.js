@@ -24,6 +24,18 @@ FlowRouter.route('/myHouses',{
     }
 });
 
+FlowRouter.route('/listHouses',{
+    action: function(){
+        BlazeLayout.render('mainLayout',{content:'listHouses'});
+    }
+});
+
+FlowRouter.route('/cardHouse',{
+    action: function(){
+        BlazeLayout.render('mainLayout',{content:'listHouses'});
+    }
+});
+
 FlowRouter.notFound = {
     action() {
         BlazeLayout.render('mainLayout', {content: 'notFound'});
