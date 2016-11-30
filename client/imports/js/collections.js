@@ -1,7 +1,31 @@
 // user = new Mongo.Collection('user');
-reservations = new Mongo.Collection('reservations');
-houses = new Mongo.Collection('houses');
-reviews = new Mongo.Collection('reviews');
+Reservations = new Mongo.Collection('reservations');
+Houses = new Mongo.Collection('houses');
+Reviews = new Mongo.Collection('reviews');
+
+Reviews.schema = new SimpleSchema({
+	reviewer:{type:String},
+	tobereviewed:{type:String},
+	rating:{type:Number, min:0,max:5, defaultValue:3, decimal:true},
+	description:{type:String,optional:true}
+});
+
+Reservations.schema = new SimpleSchema({
+	checkin:{type: Date, minimum: new Date().getDate()},
+	checkout: {type: Date},
+	reservedHouse: {type:Houses},
+	reserver:{type: String}
+
+});
+
+Houses.schema = new SimpleSchema({
+    owner: {type: String},
+	name: {type: String},
+	description: {type: String, defaultValue:""},
+	location: {type:String,defaultValue:""},
+	nightlyRate: {type:Number,defaultValue:0,min:0},
+	isAvailable: {type:Boolean, defaultValue:true}
+});
 
 if(Meteor.isServer){
 	Meteor.startup(function (){
@@ -13,7 +37,7 @@ if(Meteor.isServer){
 	// 	reservations._ensureIndex({
 	// 		'check-in': 1,
 	// 		'check-out': 1,
-	// 		'price': double,
+	// 		'price': double, THIS CAN BE PART OF HOUSE INFO
 	// 		'houseID': int
 	// 	});
     //

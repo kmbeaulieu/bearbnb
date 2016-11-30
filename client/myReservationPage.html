@@ -1,26 +1,26 @@
-<template name="myhouses">
-My houses page!
-
-    <h3>My Houses</h3>
+<template name="myReservations">
+    <h3>My Reservations</h3>
     <hr />
+
     <table class="table table-striped table-hover">
         <thead>
         <tr>
-            <th>House Name</th>
-            <th>Location</th>
-            <th>Description</th>
-            <th>Is Available</th>
+            <th>Reservation id</th>
+            <th>House</th>
+            <th>Checkin</th>
+            <th>Checkout</th>
             <th>Actions</th>
         </tr>
         </thead>
+        <!--THIS WILL BE ADDED WHEN COLLECTIONS WORK-->
         <!--<tbody>-->
-        <!--{{#each houses}}-->
+        <!--{{#each reservations}}-->
             <!--<tr>-->
-                <!--<td><a href="/house/{{house.houseid}}">{{house.name}}</a></td>-->
-                <!--<td>{{house.location}}</td>-->
-                <!--<td>{{house.description}}</td>-->
-                <!--<td>{{house.isAvailable}}</td>-->
-                <!--<td><a href="/myApplications/{{_id}}" class="btn btn-primary" id="viewApplication"><span class="glyphicon glyphicon-search"></span></a>-->
+                <!--<td><a href="#">{{reservation.name}}</a></td>-->
+                <!--<td>{{reservation.house.name}}</td>-->
+                <!--<td>{{reservation.checkin}}</td>-->
+                <!--<td>{{reservation.checkout}}</td>-->
+                <!--<td><span class="glyphicon glyphicon-search">-->
                     <!--{{#if house.isAvailable}}-->
                         <!--<button class="btn btn-danger" id="houseTrash"><span class="glyphicon glyphicon-trash"></span></button>-->
                     <!--{{/if}}-->
