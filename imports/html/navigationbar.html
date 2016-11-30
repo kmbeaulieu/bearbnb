@@ -1,0 +1,40 @@
+<template name="navigationbar">
+    <nav class="navbar navbar-default">
+        <!--all items encased in the fluid container-->
+        <div class="container-fluid">
+            <!--header/brand-->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Bear BnB</a>
+            </div>
+            <!--items-->
+            <div class="collapse navbar-collapse" id="navbardefault">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Type in a location!">
+                    </div>
+                    <button type="submit" class="btn btn-default">Search</button>
+                </form>
+                <!--These are the things on the right side of the nav bar-->
+                <ul class="nav navbar-nav navbar-right">
+                    <!--login button if not logged in, dropdown menu if logged in-->
+                    {{#if currentUser}}
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">My reservations</a></li>
+                                <li><a href="#">My house listings</a></li>
+                                <li><a href="#">Account options</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#" class="logout">Logout</a></li>
+                            </ul>
+                        </li>
+                    {{else}}
+                        {{> loginButtons}}
+                    {{/if}}
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</template>

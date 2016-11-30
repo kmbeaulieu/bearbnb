@@ -1,37 +1,37 @@
-user = new Mongo.Collection('user');
+// user = new Mongo.Collection('user');
 reservations = new Mongo.Collection('reservations');
 houses = new Mongo.Collection('houses');
 reviews = new Mongo.Collection('reviews');
 
 if(Meteor.isServer){
 	Meteor.startup(function (){
-		user._ensureIndex({
-			'username': 'text',
-			'password': 'text'
-		});
+		// user._ensureIndex({
+		// 	'username': 'text',
+		// 	'password': 'text'
+		// });
 
-		reservations._ensureIndex({
-			'check-in': 1,
-			'check-out': 1,
-			'price': double,
-			'houseID': int
-		});
-
-		houses._ensureIndex({
-			'location': 'text',
-			'description': 'text',
-			'name': 'text',
-			'owner': integer,
-			'isAvailable': boolean
-		});
-
-		reviews._ensureIndex({
-			'sender': int,
-			'receiver': int,
-			'rating': int,
-			'comments': 'text',
-			'dateReviewed': 1
-		});
+	// 	reservations._ensureIndex({
+	// 		'check-in': 1,
+	// 		'check-out': 1,
+	// 		'price': double,
+	// 		'houseID': int
+	// 	});
+    //
+	// 	houses._ensureIndex({
+	// 		'location': 'text',
+	// 		'description': 'text',
+	// 		'name': 'text',
+	// 		'owner': integer,
+	// 		'isAvailable': boolean
+	// 	});
+    //
+	// 	reviews._ensureIndex({
+	// 		'sender': int,
+	// 		'receiver': int,
+	// 		'rating': int,
+	// 		'comments': 'text',
+	// 		'dateReviewed': 1
+	// 	});
 	});
 }
 
