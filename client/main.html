@@ -1,26 +1,35 @@
-<head>
-    <title>Bear BnB</title>
-</head>
 
-<body>
-{{> navbar}}
 
-{{#if currentUser}}
-    <!--display these if logged in-->
-    {{> hello}}
-    {{> info}}
-    {{else}}
-    <!--display this if not logged in -->
-{{/if}}
+<template name="mainLayout">
+    <header>
+        {{> navigationbar}}
+    </header>
+    <main>
+        {{> Template.dynamic template=content}}
+    </main>
+    <footer>
+        <div class="navbar navbar-fixed-bottom">
+            <span class="text-muted">This is for 172 web app project. Not intended for use by bears.</span>
+        </div>
+    </footer>
 
-</body>
-
-<template name="hello">
-    <button>Click Me</button>
-    <p>You've pressed the button {{counter}} times.</p>
 </template>
 
-<template name="info">
+<template name="welcome">
+<div class="jumbotron">
+    <div class="container">
+        <h1>Welcome to Bear BnB!</h1>
+        <p>You can reserve people's houses here.</p>
+    </div>
+</div>
+    Some stuff will go here eventually.
+
+</template>
+
+<template name="landing">
+    <button>Click Me</button>
+    <p>You've pressed the button {{counter}} times.</p>
+
     <h2>Learn Meteor!</h2>
     <ul>
         <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
@@ -30,32 +39,32 @@
     </ul>
 </template>
 
-<template name="navbar">
+<template name="navigationbar">
     <nav class="navbar navbar-default">
         <!--all items encased in the fluid container-->
         <div class="container-fluid">
             <!--header/brand-->
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Bear BnB</a>
+                <a class="navbar-brand" href="/">Bear BnB</a>
             </div>
             <!--items-->
             <div class="collapse navbar-collapse" id="navbardefault">
-                    <form class="navbar-form navbar-left">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Type in a location!">
-                        </div>
-                        <button type="submit" class="btn btn-default">Search</button>
-                    </form>
+                <!--<form class="navbar-form navbar-left">-->
+                    <!--<div class="form-group">-->
+                        <!--<input type="text" class="form-control" placeholder="Type in a location!">-->
+                    <!--</div>-->
+                    <!--<button type="submit" class="btn btn-default">Search</button>-->
+                <!--</form>-->
                 <!--These are the things on the right side of the nav bar-->
                 <ul class="nav navbar-nav navbar-right">
                     <!--login button if not logged in, dropdown menu if logged in-->
                     {{#if currentUser}}
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                               aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">My reservations</a></li>
-                                <li><a href="#">My house listings</a></li>
+                                <li><a href="/myReservations">My reservations</a></li>
+                                <li><a href="/myHouses">My house listings</a></li>
                                 <li><a href="#">Account options</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="#" class="logout">Logout</a></li>
