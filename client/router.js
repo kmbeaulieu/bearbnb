@@ -1,4 +1,5 @@
 import {Meteor} from 'meteor/meteor';
+
 FlowRouter.route('/',{
     action: function(){
         if(Meteor.userId()!=null){
@@ -27,8 +28,15 @@ FlowRouter.route('/myHouses',{
     }
 });
 
-FlowRouter.route("/house/houseid",{
-    action:function(){
+FlowRouter.route('/myHouses/:_id',
+    {
+        action:function (params) {
+            BlazeLayout.render('mainLayout',{content:'house'});
+        }
+    });
+
+FlowRouter.route("/house/:_id",{
+    action:function(params){
         BlazeLayout.render('mainLayout',{content:'house'});
 
     }

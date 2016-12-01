@@ -12,22 +12,22 @@
             <th>Actions</th>
         </tr>
         </thead>
-        <!--THIS WILL BE ADDED WHEN COLLECTIONS WORK-->
-        <!--<tbody>-->
-        <!--{{#each reservations}}-->
-            <!--<tr>-->
-                <!--<td><a href="#">{{reservation.name}}</a></td>-->
-                <!--<td>{{reservation.house.name}}</td>-->
-                <!--<td>{{reservation.checkin}}</td>-->
-                <!--<td>{{reservation.checkout}}</td>-->
-                <!--<td><span class="glyphicon glyphicon-search">-->
-                    <!--{{#if house.isAvailable}}-->
-                        <!--<button class="btn btn-danger" id="houseTrash"><span class="glyphicon glyphicon-trash"></span></button>-->
-                    <!--{{/if}}-->
-                <!--</td>-->
-            <!--</tr>-->
-        <!--{{/each}}-->
-        <!--</tbody>-->
+        <tbody>
+        {{#each reservations}}
+            <tr>
+                <td><a href="#">{{name}}</a></td>
+                <td>{{house.name}}</td>
+                <td>{{checkin}}</td>
+                <td>{{checkout}}</td>
+                <td><span class="glyphicon glyphicon-search">
+                    {{#if house.isAvailable}}
+                        <button class="btn btn-danger" id="houseTrash"><span class="glyphicon glyphicon-trash"></span></button>
+                    {{/if}}
+                </td>
+            </tr>
+            <
+        {{/each}}
+        </tbody>
     </table>
 
     <!--use this if you want to make a list by the house ad instead of a table-->

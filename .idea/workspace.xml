@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bda79a17-b842-4881-81f5-f2f7970cde44" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/cardHouse.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/createhouseform.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/listHouses.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/myHouses.html" afterPath="$PROJECT_DIR$/client/houses.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/myReservationPage.html" afterPath="$PROJECT_DIR$/client/reservations.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/newHouse.js" afterPath="$PROJECT_DIR$/client/houses.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/listHouses.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/listHouses.js" afterPath="$PROJECT_DIR$/client/listHouses.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/main.css" afterPath="$PROJECT_DIR$/client/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/main.html" afterPath="$PROJECT_DIR$/client/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/houses.html" afterPath="$PROJECT_DIR$/client/houses.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/reservations.html" afterPath="$PROJECT_DIR$/client/reservations.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/router.js" afterPath="$PROJECT_DIR$/client/router.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -36,64 +30,20 @@
       <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="52" column="33" lean-forward="true" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+            <state relative-caret-position="236">
+              <caret line="55" column="76" lean-forward="true" selection-start-line="55" selection-start-column="76" selection-end-line="55" selection-end-column="76" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="houses.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/houses.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="houses.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="houses.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/houses.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+            <state relative-caret-position="374">
+              <caret line="43" column="3" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="43" selection-end-column="3" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reviews.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/reviews.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="router.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/router.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="59" lean-forward="true" selection-start-line="31" selection-start-column="59" selection-end-line="31" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,21 +52,19 @@
       <file leaf-file-name="reservations.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/reservations.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="55" lean-forward="true" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+            <state relative-caret-position="202">
+              <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listHouses.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/listHouses.js">
+      <file leaf-file-name="router.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="340">
+              <caret line="20" column="61" lean-forward="true" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -150,8 +98,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/templates/myhouses.xhtml" />
-        <option value="$PROJECT_DIR$/client/templates/myhouses.html" />
         <option value="$PROJECT_DIR$/client/templates/myhouses" />
         <option value="$PROJECT_DIR$/client/templates/navbar.html" />
         <option value="$PROJECT_DIR$/lib/collections.js" />
@@ -192,15 +138,17 @@
         <option value="$PROJECT_DIR$/client/myHouses.html" />
         <option value="$PROJECT_DIR$/imports/house.css" />
         <option value="$PROJECT_DIR$/client/main.css" />
-        <option value="$PROJECT_DIR$/client/router.js" />
         <option value="$PROJECT_DIR$/client/listHouses.html" />
         <option value="$PROJECT_DIR$/client/cardHouse.html" />
         <option value="$PROJECT_DIR$/client/createhouseform.html" />
         <option value="$PROJECT_DIR$/client/listHouses.js" />
         <option value="$PROJECT_DIR$/client/reviews.js" />
         <option value="$PROJECT_DIR$/client/main.html" />
-        <option value="$PROJECT_DIR$/client/houses.js" />
+        <option value="$PROJECT_DIR$/client/router.js" />
         <option value="$PROJECT_DIR$/client/houses.html" />
+        <option value="$PROJECT_DIR$/client/houses.js" />
+        <option value="$PROJECT_DIR$/client/reservations.html" />
+        <option value="$PROJECT_DIR$/client/reservations.js" />
       </list>
     </option>
   </component>
@@ -259,6 +207,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bearbnb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bearbnb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imports" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -380,7 +346,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52315000" />
+    <option name="totallyTimeSpent" value="53845000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
@@ -417,9 +383,9 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.118504435" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34410647" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32822478" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822478" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2534854" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -439,14 +405,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/reservations.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/createhouseform.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -606,14 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/js/collections.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="28" lean-forward="false" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/js/myhouses.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -634,14 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="59" lean-forward="true" selection-start-line="31" selection-start-column="59" selection-end-line="31" selection-end-column="59" />
           <folding />
         </state>
       </provider>
@@ -670,24 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/listHouses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/reservations.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="55" lean-forward="true" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -698,39 +622,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/listHouses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/houses.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/reviews.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="61" lean-forward="true" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/reservations.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/reservations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#48#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/js/collections.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="52" column="33" lean-forward="true" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+        <state relative-caret-position="236">
+          <caret line="55" column="76" lean-forward="true" selection-start-line="55" selection-start-column="76" selection-end-line="55" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/houses.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+        <state relative-caret-position="374">
+          <caret line="43" column="3" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="43" selection-end-column="3" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/houses.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
