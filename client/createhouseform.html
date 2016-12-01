@@ -2,23 +2,23 @@
     <form>
         <div class="form-group">
             <label for="housename">House Name</label>
-            <input type="text" class="form-control" id="housename" placeholder="Enter Name">
+            <input type="text" class="form-control" name="housename" placeholder="Enter Name">
         </div>
         <div class="form-group">
             <label for="houselocation">Location</label>
-            <input type="text" class="form-control" id="houselocation" placeholder="Enter Location">
+            <input type="text" class="form-control" name="houselocation" placeholder="Enter Location">
             <small id="locationhelp" class="form-text text-muted">Enter the City and State of your house.</small>
         </div>
         <div class="form-group">
             <label for="housedescription">Description</label>
-            <textarea class="form-control" id="housedescription" rows="4"></textarea>
+            <textarea class="form-control" name="housedescription" rows="4"></textarea>
             <small id="housedescriptionhelp" class="form-text text-muted">Write a nice description of your house, amenities, nearby attractions, etc.</small>
         </div>
         <div class="form-group">
             <label for="houserate">Nightly Rate</label>
             <div class="input-group">
                 <div class="input-group-addon">$</div>
-                <input type="number" class="form-control" id="houserate" placeholder="Enter dollar amount">
+                <input type="number" class="form-control" name="houserate" placeholder="Enter dollar amount">
             </div>
         </div>
         <button type="submit" class="btn btn-primary" id="submithousebutton">Submit</button>

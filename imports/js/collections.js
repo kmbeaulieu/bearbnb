@@ -1,7 +1,8 @@
-// user = new Mongo.Collection('user');
-Reservations = new Mongo.Collection('reservations');
-Houses = new Mongo.Collection('houses');
-Reviews = new Mongo.Collection('reviews');
+import{Mongo} from 'meteor/mongo';
+
+export const Reservations = new Mongo.Collection('reservations');
+export const Houses = new Mongo.Collection('houses');
+export const Reviews = new Mongo.Collection('reviews');
 //
 // Reviews.schema = new SimpleSchema({
 // 	reviewer:{type:String},

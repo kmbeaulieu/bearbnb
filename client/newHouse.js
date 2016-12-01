@@ -1,27 +1,49 @@
 import {Meteor} from 'meteor/meteor';
 import {Template} from 'meteor/templating';
-var user = Meteor.userId();
+import {Mongo} from 'meteor/mongo';
+import {Houses} from '../imports/js/collections.js';
 
+import '../imports/js/collections';
+
+let user = Meteor.userId();
+
+Template.myHouses.onCreated(function(){
+    this.subscribe('houses');
+});
 Template.myHouses.events({
     'click #createhousebutton'(){
         FlowRouter.go('mainLayout',{content:"createhouseform"});
     }
 });
 
+Template.myHouses.helpers({
+    houses(){
+        return Houses.find({owner:user});
+    }
+});
+
+Template.createhouseform.onCreated(function(){
+    this.subscribe('houses');
+});
+
+Template.createhouseform.helpers({
+
+});
+
 Template.createhouseform.events({
-    'click #submithousebutton'(event){
+    'submit form'(event){
         event.preventDefault();
-        //figure out how to get the values from the radio buttons
+        console.log(event);
+        console.log("You clicked submit new house");
+        const target = event.target;
 
-        // if(event.target.radiobutton.value){var a = true;}
-        // else{a=false;}
+        var hname = target.housename.value;
+        var hlocation = target.houselocation.value;
+        var hdesc = target.housedescription.value;
+        var hrate = target.houserate.value;
 
-        //checking what values are input, if i got the thing right by using event.target...
-        console.log("desc: " +event.target.description.value);
-        console.log("location: " +event.target.location.value);
-        console.log("rate: " +event.target.nightlyRate.value);
-
-
+        Houses.insert({owner:user,name:hname,location:hlocation,description:hdesc,nightlyRate:hrate,isAvailable:true});
+        console.log(Houses.find({}));
         // Meteor.call("insertHouse",{
         //     owner:user,
         //     name:,
