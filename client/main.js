@@ -2,8 +2,6 @@ import {Template} from 'meteor/templating';
 import {ReactiveVar} from 'meteor/reactive-var';
 import {Meteor} from 'meteor/meteor';
 
-import '../imports/js/collections.js';
-import '../imports/js/'
 import './main.html';
 
 Template.landing.onCreated(function testOnCreated() {

@@ -29,26 +29,16 @@
         {{/each}}
         </tbody>
     </table>
-
-    <!--use this if you want to make a list by the house ad instead of a table-->
-    <!--<div class="row">-->
-        <!--{{#each houses}}-->
-            <!--<div class="col-xs-12 col-md-6">-->
-                <!--{{> houselisting house=this}}-->
-            <!--</div>-->
-        <!--{{/each}}-->
-    <!--</div>-->
-
 </template>
 
 <template name="house">
-<div class="card">
-    <h1><p>{{name}}</p></h1>
-    <h3 class="text-muted"><p>{{location}}</p></h3>
-    <div class="container">{{description}}</div>
-    <div class="container">{{nightlyRate}}</div>
-
-</div>
+    <h1>{{house.name}}</h1>
+    <h3 class="text-muted">{{house.location}}</h3>
+    <div class="container">{{house.description}}</div>
+    <div class="container">{{house.nightlyRate}}</div>
+    {{#if currentUser}}{{#if house.isAvailable}}
+        <button class="btn btn-danger" id="trashHouse"><span class="glyphicon glyphicon-trash"></span></button>
+    {{/if}}{{/if}}
 </template>
 
 <template name="listHouses">

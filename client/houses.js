@@ -2,12 +2,31 @@ import {Meteor} from 'meteor/meteor';
 import {Template} from 'meteor/templating';
 import {Mongo} from 'meteor/mongo';
 import {Houses} from '../imports/js/collections.js';
+import {Reservations} from '../imports/js/collections.js';
 
-import '../imports/js/collections';
+import'../imports/js/collections.js';
 
 let user = Meteor.userId();
+/*
+ * This is for a single house
+ */
+Template.house.onCreated(function(){
+   this.subscribe('houses');
+});
+Template.house.helpers({
+   house(){
+       let id = FlowRouter.getParam('_id');
+       return Houses.findOne({_id:id});
+   }
+});
+Template.house.events({
+    'click #trashHouse'(){
+        Houses.remove({_id:FlowRouter.getParam('_id')});
+        FlowRouter.go("/");
+    }
+});
 
-/**
+/*
  * This is for listHouses
  */
 Template.listHouses.onCreated(function () {
@@ -19,7 +38,8 @@ Template.listHouses.helpers({
         return Houses.find({});
     }
 });
-/**
+
+/*
  * This is for myHouses
  */
 
@@ -43,7 +63,7 @@ Template.myHouses.helpers({
     }
 });
 
-/**
+/*
  * This is for createHouse
  */
 
@@ -58,8 +78,6 @@ Template.createhouseform.helpers({
 Template.createhouseform.events({
     'submit form'(event){
         event.preventDefault();
-        console.log(event);
-        console.log("You clicked submit new house");
         const target = event.target;
 
         //needs validation but this works for now
@@ -67,9 +85,11 @@ Template.createhouseform.events({
         var hlocation = target.houselocation.value;
         var hdesc = target.housedescription.value;
         var hrate = target.houserate.value;
+        Reservations.insert({reserver:"dWkCzZSSP6SmsMFSL", house:"vNbh7aHRL7zN3GAiX", checkin: new Date(), checkout: new Date()});
 
         Houses.insert({owner:user,name:hname,location:hlocation,description:hdesc,nightlyRate:hrate,isAvailable:true});
-        console.log(Houses.find({}));
+        target.reset();
+        FlowRouter.go("/myHouses");
         // Meteor.call("insertHouse",{
         //     owner:user,
         //     name:,
@@ -90,10 +110,10 @@ Template.createhouseform.events({
 /**
  * Any meteor methods for any house functions
  */
-Meteor.methods({
-    insertHouse: function(house){
-        if(Houses.schema.validate(house)) {
-            return Houses.insert(house);
-        }
-    }
-});
+// Meteor.methods({
+//     insertHouse: function(house){
+//         if(Houses.schema.validate(house)) {
+//             return Houses.insert(house);
+//         }
+//     }
+// });
