@@ -1,9 +1,3 @@
-Template.listHouses.onCreated(function () {
-	this.subscribe('houses');
-});
+import {Template} from 'meteor/templating';
+import {Houses} from '../imports/js/collections.js';
 
-Template.listHouses.helpers({
-	houses() {
-		return Houses.find({});
-	}
-});

@@ -7,13 +7,34 @@ import '../imports/js/collections';
 
 let user = Meteor.userId();
 
+/**
+ * This is for listHouses
+ */
+Template.listHouses.onCreated(function () {
+    this.subscribe('houses');
+});
+
+Template.listHouses.helpers({
+    houses() {
+        return Houses.find({});
+    }
+});
+/**
+ * This is for myHouses
+ */
+
+
 Template.myHouses.onCreated(function(){
     this.subscribe('houses');
 });
 Template.myHouses.events({
     'click #createhousebutton'(){
         FlowRouter.go('mainLayout',{content:"createhouseform"});
-    }
+    },
+    'click #houseTrash'(){
+        Houses.remove({_id:this._id});
+    },
+
 });
 
 Template.myHouses.helpers({
@@ -21,6 +42,10 @@ Template.myHouses.helpers({
         return Houses.find({owner:user});
     }
 });
+
+/**
+ * This is for createHouse
+ */
 
 Template.createhouseform.onCreated(function(){
     this.subscribe('houses');
@@ -37,6 +62,7 @@ Template.createhouseform.events({
         console.log("You clicked submit new house");
         const target = event.target;
 
+        //needs validation but this works for now
         var hname = target.housename.value;
         var hlocation = target.houselocation.value;
         var hdesc = target.housedescription.value;
@@ -61,7 +87,9 @@ Template.createhouseform.events({
         // });
     }
 });
-
+/**
+ * Any meteor methods for any house functions
+ */
 Meteor.methods({
     insertHouse: function(house){
         if(Houses.schema.validate(house)) {

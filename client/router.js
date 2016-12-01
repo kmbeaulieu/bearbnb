@@ -2,7 +2,7 @@ import {Meteor} from 'meteor/meteor';
 FlowRouter.route('/',{
     action: function(){
         if(Meteor.userId()!=null){
-            BlazeLayout.render('mainLayout',{content:'welcome'});
+            BlazeLayout.render('mainLayout',{content:'listHouses'});
 
         }else{
             BlazeLayout.render('mainLayout',{content:'landing'});
@@ -10,9 +10,6 @@ FlowRouter.route('/',{
     }
 });
 
-// FlowRouter.route('/houses/id',{
-//     //this will be a specific house info page, what young is making
-// });
 FlowRouter.route('/myHouses/newHouse',{
     action: function(){
         BlazeLayout.render('mainLayout',{content:'createhouseform'});
@@ -27,6 +24,13 @@ FlowRouter.route('/myReservations',{
 FlowRouter.route('/myHouses',{
     action: function(){
         BlazeLayout.render('mainLayout',{content:'myHouses'});
+    }
+});
+
+FlowRouter.route("/house/houseid",{
+    action:function(){
+        BlazeLayout.render('mainLayout',{content:'house'});
+
     }
 });
 
