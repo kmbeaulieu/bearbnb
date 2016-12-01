@@ -4,18 +4,18 @@ import {Meteor} from 'meteor/meteor';
 
 import './main.html';
 
-Template.test.onCreated(function testOnCreated() {
+Template.landing.onCreated(function testOnCreated() {
     // counter starts at 0
     this.counter = new ReactiveVar(0);
 });
 
-Template.test.helpers({
+Template.landing.helpers({
     counter() {
         return Template.instance().counter.get();
     },
 });
 
-Template.test.events({
+Template.landing.events({
     'click button'(event, instance) {
         // increment the counter when button is clicked
         instance.counter.set(instance.counter.get() + 1);
@@ -33,4 +33,3 @@ Template.navigationbar.events({
     }
 });
 let user = Meteor.userId();
-

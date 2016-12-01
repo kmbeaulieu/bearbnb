@@ -8,11 +8,25 @@
         {{> Template.dynamic template=content}}
     </main>
     <footer>
-        This is a footer.
+        <div class="navbar navbar-fixed-bottom">
+            <span class="text-muted">This is for 172 web app project. Not intended for use by bears.</span>
+        </div>
     </footer>
+
 </template>
 
-<template name="test">
+<template name="welcome">
+<div class="jumbotron">
+    <div class="container">
+        <h1>Welcome to Bear BnB!</h1>
+        <p>You can reserve people's houses here.</p>
+    </div>
+</div>
+    Some stuff will go here eventually.
+
+</template>
+
+<template name="landing">
     <button>Click Me</button>
     <p>You've pressed the button {{counter}} times.</p>
 

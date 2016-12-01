@@ -1,6 +1,12 @@
+import {Meteor} from 'meteor/meteor';
 FlowRouter.route('/',{
     action: function(){
-        BlazeLayout.render('mainLayout',{content:'test'});
+        if(Meteor.userId()!=null){
+            BlazeLayout.render('mainLayout',{content:'welcome'});
+
+        }else{
+            BlazeLayout.render('mainLayout',{content:'landing'});
+        }
     }
 });
 

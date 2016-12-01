@@ -1,5 +1,12 @@
 import {Meteor} from 'meteor/meteor';
+import {Template} from 'meteor/templating';
 var user = Meteor.userId();
+
+Template.myHouses.events({
+    'click #createhousebutton'(){
+        FlowRouter.go('mainLayout',{content:"createhouseform"});
+    }
+});
 
 Template.createhouseform.events({
     'click #submithousebutton'(event){
