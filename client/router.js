@@ -60,6 +60,20 @@ FlowRouter.route('/makeReservation',{
     }
 });
 
+FlowRouter.route('/profile', {
+//FlowRouter.route('/profile/:userId', {
+  action: function(){
+      BlazeLayout.render('mainLayout',{content:'profile'});
+  }
+    // action(param) {
+    //     if (param.userId === Meteor.userId()) {
+    //         BlazeLayout.render('mainLayout', {content: 'profile'});
+    //     } else {
+    //         BlazeLayout.render('mainLayout', {content: 'userProfile'});
+    //     }
+    // }
+});
+
 FlowRouter.notFound = {
     action() {
         BlazeLayout.render('mainLayout', {content: 'notFound'});
