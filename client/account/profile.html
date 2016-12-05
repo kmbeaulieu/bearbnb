@@ -1,30 +1,22 @@
 <template name="profile">
   <div class="container">
-    {{#if Template.subscriptionsReady}}
-    <div class="row">
-      <p>hi {{userId}}</p>
-      {{#with profile}}
-        {{>profileInfo}}
-      {{/with}}
+    <div class="card small hoverable">
+      <div class ="row">
+        <div>
+          <h1>{{displayName user}}</h1>
+        </div>
+        <div>
+          <h4>{{user.description}}</h4>
+        </div>
+        <div>
+          <h4>{{user.phonenumber}}</h4>
+        </div>
+      </div>
+
+
+        {{#if isCurrentUser}}
+          <a href="/editProfile/{{user._id}}" class="btn btn-warning editprofile-button"><span class="glyphicon glyphicon-edit"></span> Edit Your Profile</a>
+        {{/if}}
     </div>
-    {{else}}
-      <p>Loding...</p>
-    {{/if}}
-  </div>
-</template>
-
-
-<template name="profileInfo">
-  <div class="card">
-      <div class="card-block">
-          <h4 class="card-title">{{userId}}</h4>
-          <p>hi</p>
-          <!-- <h6 class="card-subtitle-text-muted">{{location}}</h6> -->
-      </div>
-      <div class="card-block">
-          <p class="card-text">{{description}}</p>
-      </div>
-
-
   </div>
 </template>
