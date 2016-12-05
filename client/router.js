@@ -60,22 +60,22 @@ FlowRouter.route('/makeReservation',{
     }
 });
 
-FlowRouter.route('/profile/:userId', {
-    action: function(params) {
-      BlazeLayout.render('mainLayout',{content:'profile'});
-        // if (param.userId === Meteor.userId()) {
-        //     BlazeLayout.render('mainLayout', {content: 'profile'});
-        // } else {
-        //     BlazeLayout.render('mainLayout', {content: 'userProfile'});
-        // }
-    }
-});
+// FlowRouter.route('/profile/:userId', {
+//     action: function(params) {
+//       BlazeLayout.render('mainLayout',{content:'profile'});
+//         // if (param.userId === Meteor.userId()) {
+//         //     BlazeLayout.render('mainLayout', {content: 'profile'});
+//         // } else {
+//         //     BlazeLayout.render('mainLayout', {content: 'userProfile'});
+//         // }
+//     }
+// });
 
-FlowRouter.route('/editProfile/', {
-    action: function() {
-      BlazeLayout.render('mainLayout',{content:'editProfile'});
-    }
-  });
+// FlowRouter.route('/editProfile/', {
+//     action: function() {
+//       BlazeLayout.render('mainLayout',{content:'editProfile'});
+//     }
+//   });
 
 
 FlowRouter.notFound = {
