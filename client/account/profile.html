@@ -1,17 +1,29 @@
 <template name="profile">
-  <div id="wrap" class="container">
+  <div class="container">
+    {{#if Template.subscriptionsReady}}
     <div class="row">
-      <div id="profile" class="row">
-        <h1>{{displayName user}}</h1>
-
-
-        <!-- <h5>{{currentUser.profile.}}</h5>
-
-        {{#if currentUser.profile.description}}
-          <p>{{currentUser.profile.description}}</p>
-        {{/if}} -->
-      </div>
+      <p>hi {{userId}}</p>
+      {{#with profile}}
+        {{>profileInfo}}
+      {{/with}}
     </div>
+    {{else}}
+      <p>Loding...</p>
+    {{/if}}
+  </div>
+</template>
+
+
+<template name="profileInfo">
+  <div class="card">
+      <div class="card-block">
+          <h4 class="card-title">{{userId}}</h4>
+          <p>hi</p>
+          <!-- <h6 class="card-subtitle-text-muted">{{location}}</h6> -->
+      </div>
+      <div class="card-block">
+          <p class="card-text">{{description}}</p>
+      </div>
 
 
   </div>

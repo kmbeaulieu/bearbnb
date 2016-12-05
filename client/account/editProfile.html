@@ -1,0 +1,26 @@
+<template name ="editProfile">
+  <form class="editProfile">
+    <div class="container">
+
+      <div class="card-panel">
+        <div class="row">
+          <div class="input-field">
+              <input id="profile-name" type="text" class="validate" value="{{currentUser.profile.name}}" required>
+              <label class="active" for="profile-name">User name</label>
+          </div>
+          <div class="input-field">
+              <input id="profile-phone" type="text" class="validate" value="{{currentUser.profile.phone}}" required>
+              <label class="active" for="profile-last-name">Phone number</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="clearfix">
+        <div class="right">
+          <button class="btn-large" type="submit">Save</button>
+        </div>
+      </div>
+      
+    </div>
+  </form>
+</template>
