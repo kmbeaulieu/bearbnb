@@ -11,13 +11,13 @@ If you wish to run this app from heroku:
 1) visit bearbnb182.herokuapp.com
 
 Dependencies (: 
-accounts-ui
-accounts-password
-twbs:bootstrap
-kadira:flow-router
-kadira:blaze-layout
-aldeed:simple-schema
-arillo:flow-router-helpers
+accounts-ui  
+accounts-password  
+twbs:bootstrap  
+kadira:flow-router  
+kadira:blaze-layout  
+aldeed:simple-schema  
+arillo:flow-router-helpers  
 
 NOTE: These are listed in meteor's package file and will download when you do "meteor run". 
 
