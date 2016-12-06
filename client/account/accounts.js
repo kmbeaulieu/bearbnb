@@ -119,9 +119,32 @@ if (Meteor.isClient) {
             e.preventDefault();
             // console.log("you are checking: " + e.target.checked.value);
 
+            const firstName = e.target.firstName.value.trim(),
+                  lastName = e.target.lastName.value.trim(),
+                  password = e.target.password.value,
+                  //confirmPassword = e.target.confirmPassword.value,
+                  email = e.target.email.value.toLowerCase().trim(),
+                  description = e.target.description.value,
+                  phonenumber = e.target.phonenumber.value;
+
+
+              // user object
+              const user = {
+                  email: email,
+                  password: password,
+                  profile: {
+                      firstName: firstName,
+                      lastName: lastName,
+                      description: description,
+                      phonenumber: phonenumber
+                  }
+              };
+
 
              if (e.target.checkbox.checked === true ) {
                 Meteor.call("register", e.target.email.value, e.target.password.value, function() {
+                    Accounts.createUser(user);
+
                     Meteor.loginWithPassword(e.target.email.value, e.target.password.value);
                     FlowRouter.go("/");
                 });
@@ -186,9 +209,10 @@ if (Meteor.isClient) {
         },
 
         isCurrentUser: function() {
-            if (this.user()._id == Meteor.userId()) {
-                return true;
-            }
+            // if (this.user()._id === Meteor.userId()) {
+            //     return true;
+            // }
+            return true;
         },
 
         stars: function() {
