@@ -1,22 +1,24 @@
 <template name="profile">
   <div class="container">
     <div class="card small hoverable">
-      <div class ="row">
+      <div class ="row" align="center">
         <div>
-          <h1>{{displayName user}}</h1>
+          <h1>{{currentUser.profile.firstName}} {{currentUser.profile.lastName}}</h1>
+          <br>
         </div>
         <div>
-          <h4>{{user.description}}</h4>
+          <h4>{{currentUser.profile.description}}</h4>
         </div>
         <div>
-          <h4>{{user.phonenumber}}</h4>
+          <h4>{{currentUser.profile.phonenumber}}</h4>
         </div>
       </div>
+    <br>
 
 
-        {{#if isCurrentUser}}
+        <!-- {{#if isCurrentUser}}
           <a href="/editProfile/{{user._id}}" class="btn btn-warning editprofile-button"><span class="glyphicon glyphicon-edit"></span> Edit Your Profile</a>
-        {{/if}}
+        {{/if}} -->
     </div>
   </div>
 </template>
