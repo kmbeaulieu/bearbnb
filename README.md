@@ -18,10 +18,11 @@ kadira:flow-router
 kadira:blaze-layout  
 aldeed:simple-schema  
 arillo:flow-router-helpers  
+chrismbeckett:toastr
 
 NOTE: These are listed in meteor's package file and will download when you do "meteor run".  
 
 Individual contribution:  
 Krystle: my houses/my reservations, managing git merges, create house/reservation  
-Young: Housing list page (located on the front page), user account  
+Young: Housing list page (located on the front page), user account, login form  
 Jason: review template, creating presentation, collection/schema setup  
