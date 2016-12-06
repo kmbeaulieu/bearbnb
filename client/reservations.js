@@ -19,11 +19,16 @@ Template.myReservations.onCreated(function () {
 Template.myReservations.helpers({
 
     reservations(){
-        console.log(Reservations.findOne({reserver: user}));
         return Reservations.find({reserver:user});
     },
 });
 
+Template.myReservations.events({
+    'click #resTrash'(event){
+        event.preventDefault();
+        Reservations.remove({_id:this._id});
+    }
+});
 /*
 Make reservation page
  */
@@ -44,7 +49,10 @@ Template.makeReservation.events({
         var cid = target.checkinDate.value;
         var cod = target.checkoutDate.value;
         var hid = FlowRouter.getParam("_id");
+        var hobj = Houses.findOne({_id:hid});
         Reservations.insert({reserver:user,checkin:cid,checkout:cod,house:hid});
+        console.log(hobj);
+        Houses.update(hobj._id,{$set:{isAvailable:false}});
     }
 });
 /**

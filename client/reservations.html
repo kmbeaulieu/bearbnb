@@ -19,11 +19,7 @@
                 <td>{{houseObj.name}}</td>
                 <td>{{checkin}}</td>
                 <td>{{checkout}}</td>
-                <td>
-                    {{#if houseObj.isAvailable}}
-                        <button class="btn btn-danger" id="houseTrash"><span class="glyphicon glyphicon-trash"></span></button>
-                    {{/if}}
-                </td>
+                <td><button class="btn btn-danger" id="resTrash"><span class="glyphicon glyphicon-trash"></span></button></td>
             </tr>
         {{/each}}
         </tbody>

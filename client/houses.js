@@ -3,7 +3,8 @@ import {Template} from 'meteor/templating';
 import {Mongo} from 'meteor/mongo';
 import {Houses} from '../imports/js/collections.js';
 import {Reservations} from '../imports/js/collections.js';
-
+import { SimpleSchema } from 'meteor/aldeed:simple-schema';
+import {HousesSchema} from '../imports/js/collections.js';
 import'../imports/js/collections.js';
 
 let user = Meteor.userId();
@@ -35,7 +36,7 @@ Template.listHouses.onCreated(function () {
 
 Template.listHouses.helpers({
     houses() {
-        return Houses.find({});
+        return Houses.find({isAvailable:true});
     }
 });
 
@@ -85,35 +86,16 @@ Template.createhouseform.events({
         var hlocation = target.houselocation.value;
         var hdesc = target.housedescription.value;
         var hrate = target.houserate.value;
-        Reservations.insert({reserver:"dWkCzZSSP6SmsMFSL", house:"vNbh7aHRL7zN3GAiX", checkin: new Date(), checkout: new Date()});
 
-        Houses.insert({owner:user,name:hname,location:hlocation,description:hdesc,nightlyRate:hrate,isAvailable:true});
+        //check if valid, if so then insert
+        var hobj = {owner:user,name: hname,location:hlocation,description:hdesc,nightlyRate:hrate,isAvailable:true};
+        if(check(hobj,HousesSchema)){
+            Houses.insert({hobj});
+        }
         target.reset();
         FlowRouter.go("/myHouses");
-        // Meteor.call("insertHouse",{
-        //     owner:user,
-        //     name:,
-        //     description:event.target.description.value,
-        //     location: event.target.location,
-        //     nightlyRate: event.target.nightlyRate,
-        //     isAvailable: event.target.isAvailable
-        // },function(err,id){
-        //     if(id){
-        //         Console.log("it did it");
-        //        // FlowRouter.go("/");
-        //     }else{
-        //         console.log(err);
-        //     }
-        // });
     }
 });
 /**
  * Any meteor methods for any house functions
  */
-// Meteor.methods({
-//     insertHouse: function(house){
-//         if(Houses.schema.validate(house)) {
-//             return Houses.insert(house);
-//         }
-//     }
-// });
