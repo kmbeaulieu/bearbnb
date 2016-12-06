@@ -65,11 +65,38 @@
                             </ul>
                         </li>
                     {{else}}
-                        {{> loginButtons align="right"}}
+                        <!-- {{> loginButtons align="right"}} -->
+                        {{> loginBox}}
                     {{/if}}
                 </ul>
 
             </div>
         </div>
     </nav>
+</template>
+
+<template name="loginBox">
+    <!-- {{> loginButtons}} -->
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Log In&nbsp;<span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li>
+                <div class="container-fluid">
+                  <form id="login-form" action="action">
+                    <div>
+                      <input type="email" class="form-control" id="login-email" placeholder="E-mail"/>
+                      <input type="password" class="form-control" id="login-password" placeholder="Password"/>
+                      <input type="submit" class="btn btn-default" id="login-button" value="Sign in" />
+
+                    </div>
+                  </form>
+
+                </div>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/register">Register</a></li>
+        </ul>
+    </div>
 </template>
