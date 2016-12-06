@@ -19,6 +19,7 @@ Template.myReservations.onCreated(function () {
 Template.myReservations.helpers({
 
     reservations(){
+        console.log(Reservations.findOne({reserver: user}));
         return Reservations.find({reserver:user});
     },
 });
@@ -30,17 +31,20 @@ Template.makeReservation.onCreated(function(){
     this.subscribe('reservations');
     this.subscribe('houses');
 });
+
 Template.makeReservation.helpers({
    house(){
-       //return Houses.findOne({_id:})
+       return Houses.findOne({_id:FlowRouter.getParam("_id")});
    }
 });
+
 Template.makeReservation.events({
     'submit form'(event){
         let target = event.target;
         var cid = target.checkinDate.value;
         var cod = target.checkoutDate.value;
-        Reservations.insert({reserver:user,checkin:cid,checkout:cod,house:"dasd"});
+        var hid = FlowRouter.getParam("_id");
+        Reservations.insert({reserver:user,checkin:cid,checkout:cod,house:hid});
     }
 });
 /**

@@ -54,8 +54,8 @@ FlowRouter.route('/cardHouse',{
     }
 });
 
-FlowRouter.route('/makeReservation',{
-    action: function () {
+FlowRouter.route('/reserve/:_id',{
+    action: function (params) {
         BlazeLayout.render('mainLayout',{content:'makeReservation'});
     }
 });

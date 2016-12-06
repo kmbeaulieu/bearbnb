@@ -16,11 +16,11 @@
         {{#each reservations}}
             <tr>
                 <td>{{_id}}</td>
-                <td>{{house.name}}</td>
+                <td>{{houseObj.name}}</td>
                 <td>{{checkin}}</td>
                 <td>{{checkout}}</td>
                 <td>
-                    {{#if house.isAvailable}}
+                    {{#if houseObj.isAvailable}}
                         <button class="btn btn-danger" id="houseTrash"><span class="glyphicon glyphicon-trash"></span></button>
                     {{/if}}
                 </td>
@@ -31,7 +31,7 @@
 </template>
 
 <template name="makeReservation">
-    {{>house}}
+    {{_id}}
     <form>
         <div class="form-group">
             <label for="checkinDate">Check in Date</label>

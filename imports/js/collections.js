@@ -1,7 +1,13 @@
 import{Mongo} from 'meteor/mongo';
-
-export const Reservations = new Mongo.Collection('reservations');
 export const Houses = new Mongo.Collection('houses');
+
+export const Reservations = new Mongo.Collection('reservations', {
+	transform: function(doc){
+		doc.houseObj = Houses.findOne({_id:doc.house});
+        console.log("Transforming:", doc.house);
+        return doc;
+	}
+});
 export const Reviews = new Mongo.Collection('reviews');
 //
 // Reviews.schema = new SimpleSchema({
